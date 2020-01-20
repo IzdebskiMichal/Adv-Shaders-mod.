@@ -1,0 +1,11 @@
+﻿  Source.cpp
+h:\year 3\imat3907 - advanced shaders\week 1\geometryshaderlab\geometryshader\src\source.cpp(100): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+h:\year 3\imat3907 - advanced shaders\week 1\geometryshaderlab\geometryshader\src\source.cpp(115): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+h:\year 3\imat3907 - advanced shaders\week 1\geometryshaderlab\geometryshader\src\source.cpp(155): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+h:\year 3\imat3907 - advanced shaders\week 1\geometryshaderlab\geometryshader\src\source.cpp(156): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+h:\year 3\imat3907 - advanced shaders\week 1\geometryshaderlab\geometryshader\src\source.cpp(160): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+h:\year 3\imat3907 - advanced shaders\week 1\geometryshaderlab\geometryshader\src\source.cpp(161): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+h:\year 3\imat3907 - advanced shaders\week 1\geometryshaderlab\geometryshader\src\source.cpp(163): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+h:\year 3\imat3907 - advanced shaders\week 1\geometryshaderlab\geometryshader\src\source.cpp(164): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+h:\year 3\imat3907 - advanced shaders\week 1\geometryshaderlab\geometryshader\src\source.cpp(173): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  GeometryShader.vcxproj -> H:\Year 3\IMAT3907 - Advanced Shaders\Week 1\GeometryShaderLab\Debug\GeometryShader.exe
