@@ -1,6 +1,6 @@
 #version 330 core
 layout (triangles) in;
-layout (triangle_strip, max_vertices = 3) out;
+layout (points, max_vertices = 3) out;
 
 
 in vec2 vTexCoords[];
@@ -31,6 +31,7 @@ void main()
     vec3 normal = getSurfaceNormal();
 	gl_Position = (gl_in[0].gl_Position + gl_in[1].gl_Position + gl_in[2].gl_Position) / 3;
 	gTexCoords = (vTexCoords[0] + vTexCoords[1] + vTexCoords[2]) / 3;
+
 	gl_Position = explode(gl_Position, normal);
 	EmitVertex();
   

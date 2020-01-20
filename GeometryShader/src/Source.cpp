@@ -83,7 +83,8 @@ int main()
 
 	// build and compile shaders
 	// -------------------------
-	Shader shader("..\\shaders\\plainVert.vs", "..\\shaders\\plainFrag.fs", "..\\shaders\\plainGeo.gs") ;
+	Shader modelShader("..\\shaders\\plainVert.vs", "..\\shaders\\plainFrag.fs", "..\\shaders\\plainGeo.gs") ;
+	Shader normalShader("..\\shaders\\vert.vs", "..\\shaders\\frag.fs", "..\\shaders\\geo.gs");
 	Model ourModel("..\\resources\\elephant\\elefante.obj");
 	//Model ourModel("..\\resources\\nano\\nanosuit\\nanosuit.obj");
 
@@ -105,16 +106,23 @@ int main()
 		glClearColor(0.05f, 0.05f, 0.05f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		
-		shader.use();
+		modelShader.use();
 		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 300.0f);
 		glm::mat4 view = camera.GetViewMatrix();
 		glm::mat4 model = glm::mat4(1.0f);
-		shader.setMat4("projection", projection);
-		shader.setMat4("view", view);
-		shader.setMat4("model", model);
-		shader.setFloat("time", glfwGetTime());
+		modelShader.setMat4("projection", projection);
+		modelShader.setMat4("view", view);
+		modelShader.setMat4("model", model);
 		//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-		ourModel.Draw(shader);
+		ourModel.Draw(modelShader);
+
+		normalShader.use();
+		normalShader.setMat4("projection", projection);
+		normalShader.setMat4("view", view);
+		normalShader.setMat4("model", model);
+		normalShader.setFloat("time", glfwGetTime());
+		//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+		ourModel.Draw(normalShader);
 		
 		glfwSwapBuffers(window);
 		glfwPollEvents();
