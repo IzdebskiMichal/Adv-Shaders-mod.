@@ -83,10 +83,10 @@ int main()
 
 	// build and compile shaders
 	// -------------------------
-	Shader modelShader("..\\shaders\\plainVert.vs", "..\\shaders\\plainFrag.fs", "..\\shaders\\plainGeo.gs") ;
+	Shader modelShader("..\\shaders\\plainVert.vs", "..\\shaders\\plainFrag.fs", nullptr) ;
 	Shader normalShader("..\\shaders\\vert.vs", "..\\shaders\\frag.fs", "..\\shaders\\geo.gs");
-	Model ourModel("..\\resources\\elephant\\elefante.obj");
-	//Model ourModel("..\\resources\\nano\\nanosuit\\nanosuit.obj");
+	//Model ourModel("..\\resources\\elephant\\elefante.obj");
+	Model ourModel("..\\resources\\nano\\nanosuit\\nanosuit.obj");
 
 
 

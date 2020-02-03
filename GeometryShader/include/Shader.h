@@ -35,7 +35,8 @@ public:
 			// open files
 			vShaderFile.open(vertexPath);
 			fShaderFile.open(fragmentPath);
-			gShaderFile.open(geometryPath);
+			if(geometryPath != nullptr)
+				gShaderFile.open(geometryPath);
 			std::stringstream vShaderStream, fShaderStream, gShaderStream;
 			// read file's buffer contents into streams
 			vShaderStream << vShaderFile.rdbuf();
